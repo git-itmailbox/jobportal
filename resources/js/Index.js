@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
+import CssBaseline from '@material-ui/core/CssBaseline'
 import Main from './Router'
+import Header from "./components/common/Header";
 
 function Index() {
     return (
-        <BrowserRouter>
-            <Route component={Main} />
-        </BrowserRouter>
+        <div>
+            <CssBaseline />
+            <Header />
+            <BrowserRouter>
+                <Route component={Main} />
+            </BrowserRouter>
+        </div>
     );
 }
 
